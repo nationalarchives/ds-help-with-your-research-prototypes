@@ -9,3 +9,5 @@ migrate.log
 # General ignores
 .DS_Store
 .idea
+
+# Others
