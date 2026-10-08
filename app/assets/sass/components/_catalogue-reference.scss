@@ -1,0 +1,17 @@
+// Custom prototype component: catalogue reference.
+// Mirrors the `.reference` style on the TNA beta catalogue record page.
+// See docs/custom-components.md
+
+.proto-catalogue-reference {
+  display: inline-block;
+  margin-right: 1em;
+  padding-right: 0.25em;
+  padding-left: 0.25em;
+  line-height: 1.4;
+  font-family: "Roboto Mono", monospace;
+  font-style: normal;
+  font-weight: 400;
+  background-color: var(--background-tint, #f4f4f4);
+  border: 1px solid var(--keyline, rgba(38, 38, 42, 0.25));
+  border-radius: 2px;
+}

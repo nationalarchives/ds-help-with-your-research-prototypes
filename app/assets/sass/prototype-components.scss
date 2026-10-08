@@ -1,0 +1,11 @@
+//
+// Custom prototype components (see docs/custom-components.md)
+//
+// This is a separate stylesheet from application.scss because the kit
+// bundles all of GOV.UK Frontend into application.css, which the TNA
+// layout does not load. It is linked from app/views/layouts/main.html.
+//
+
+@import "components/about-these-records";
+@import "components/catalogue-accordion";
+@import "components/catalogue-reference";

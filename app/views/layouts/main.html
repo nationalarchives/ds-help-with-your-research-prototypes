@@ -1,0 +1,23 @@
+{#
+For guidance on how to use layouts see:
+https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
+#}
+
+{% extends "nationalarchives/templates/prototype-kit/_base.njk" %}
+
+{%- from "nationalarchives/components/header/macro.njk" import tnaHeader -%}
+
+{% block pageTitle %}{% if pageTitle %}{{ pageTitle }} - {% endif %}{{ serviceName }} - The National Archives{% endblock pageTitle %}
+
+{% block stylesheets %}
+  {{ super() }}
+  <link href="/public/stylesheets/prototype-components.css" rel="stylesheet" type="text/css" />
+{% endblock stylesheets %}
+
+{% block header %}
+  {{ tnaHeader({
+    logo: {
+      href: '/'
+    }
+  }) }}
+{% endblock header %}

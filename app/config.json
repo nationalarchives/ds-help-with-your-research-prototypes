@@ -1,0 +1,9 @@
+{
+  "serviceName": "Help with your research",
+  "useServiceNavigation": true,
+  "plugins": {
+    "govuk-frontend": {
+      "rebrand": true
+    }
+  }
+}

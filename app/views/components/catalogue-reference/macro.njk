@@ -1,0 +1,12 @@
+{#
+Custom prototype component: catalogue reference.
+Mirrors the `.reference` style on the TNA beta catalogue record page.
+See docs/custom-components.md
+
+Params:
+  reference (string, required) - the catalogue reference, for example "PROB 1/4"
+  classes (string) - extra classes
+#}
+{% macro protoCatalogueReference(params) -%}
+<strong class="proto-catalogue-reference{% if params.classes %} {{ params.classes }}{% endif %}">{{ params.reference }}</strong>
+{%- endmacro %}

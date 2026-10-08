@@ -1,0 +1,131 @@
+{% extends "layouts/main.html" %}
+
+{%- from "components/catalogue-accordion/macro.njk" import protoCatalogueAccordion -%}
+{%- from "nationalarchives/components/breadcrumbs/macro.njk" import tnaBreadcrumbs -%}
+{%- from "nationalarchives/components/tags/macro.njk" import tnaTags -%}
+{%- from "components/catalogue-reference/macro.njk" import protoCatalogueReference -%}
+
+{% set pageTitle = "Will of William Shakespeare" %}
+{% set recordTitle = "Will of William Shakespeare 25 March 1616. Proved 22 June 1616." %}
+{% set guideUrl = "/test-journey/wills-before-1858" %}
+
+{% set details = [
+  { label: "Reference", value: "PROB 1/4" },
+  { label: "Title", value: recordTitle },
+  { label: "Date", value: "22 June 1616" },
+  { label: "Description", value: recordTitle },
+  { label: "Related material", value: "For the will box, please see PROB 1/4A" },
+  { label: "Held by", value: "The National Archives, Kew" },
+  { label: "Legal status", value: "Public Record(s)" },
+  { label: "Closure status", value: "Open Document, Open Description" }
+] %}
+
+{% block beforeContent %}
+<div class="tna-background-tint">
+  <div class="tna-container">
+    {{ tnaBreadcrumbs({
+      items: [
+        {
+          text: 'Home',
+          href: '/'
+        },
+        {
+          text: 'Catalogue',
+          href: '#'
+        },
+        {
+          text: 'Search',
+          href: '#'
+        }
+      ],
+      classes: 'tna-column tna-column--full tna-!--padding-vertical-s'
+    }) }}
+  </div>
+</div>
+{% endblock beforeContent %}
+
+{% block content %}
+<div class="tna-section tna-!--padding-top-l">
+  <div class="tna-container">
+    <div class="tna-column tna-column--width-2-3 tna-column--width-5-6-medium tna-column--full-small tna-column--full-tiny tna-!--padding-top-xs">
+      <hgroup class="tna-hgroup-xl">
+        <p class="tna-hgroup__supertitle">Piece</p>
+        <h1 class="tna-hgroup__title">{{ recordTitle }}</h1>
+      </hgroup>
+      <p>Catalogue reference: {{ protoCatalogueReference({ reference: "PROB 1/4" }) }}</p>
+    </div>
+  </div>
+
+  <div class="tna-container">
+    <div class="tna-column tna-column--width-1-2 tna-column--full-small tna-column--full-tiny tna-!--margin-top-m">
+      <div class="tna-aside tna-aside--tight tna-background-accent-light">
+        <h2 class="tna-heading-m">What's it about?</h2>
+        <p>This record is about the <strong>Will of William Shakespeare</strong> dating from <strong>22 June 1616</strong> in the series <strong>Prerogative Court of Canterbury: Wills of Selected Famous Persons</strong>. It is held at <strong>The National Archives, Kew</strong>.</p>
+      </div>
+    </div>
+    <div class="tna-column tna-column--width-1-2 tna-column--full-small tna-column--full-tiny tna-!--margin-top-m">
+      <div class="tna-aside tna-aside--tight tna-background-accent-light">
+        <h2 class="tna-heading-m">View options</h2>
+        <p>This record is available online and can be downloaded. <a href="#record-extended-details">How to view it</a>.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tna-container">
+    <div class="tna-column tna-column--full tna-!--margin-top-m">
+      <div class="tna-aside tna-aside--tight tna-background-tint">
+        <h2 class="tna-heading-m">{{ serviceName }}</h2>
+        <p>Read our guide to finding and understanding records like this one.</p>
+        <ul class="tna-ul tna-ul--plain">
+          <li><a href="{{ guideUrl }}">Wills and administrations before 1858</a></li>
+          <li><a href="/test-journey/">All wills and probate guides</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="tna-container tna-!--margin-top-m">
+    <div class="tna-column tna-column--full tna-!--margin-top-s">
+      <h2 class="tna-heading-l" id="record-details">Full description and record details</h2>
+      <dl class="tna-dl tna-dl--lined tna-dl--right-weighted">
+        {%- for item in details %}
+        <dt>{{ item.label }}</dt>
+        <dd>{{ item.value }}</dd>
+        {%- endfor %}
+        <dt>Subjects</dt>
+        <dd>
+          {{ tnaTags({
+            items: [
+              { label: "Wills and probate", href: "#" }
+            ],
+            small: true
+          }) }}
+        </dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="tna-container">
+    <div class="tna-column tna-column--full tna-!--margin-top-m" id="record-extended-details">
+      {{ protoCatalogueAccordion({
+        id: 'record-more',
+        itemHeadingLevel: 3,
+        items: [
+          {
+            title: 'How to order it',
+            body: '<ol class="tna-ol"><li>View this record page in our current catalogue</li><li>Check viewing and downloading options</li><li>Select an option and follow instructions</li></ol><div class="tna-button-group tna-!--margin-top-s"><a href="#" class="tna-button">View this record page</a></div>'
+          },
+          {
+            title: 'Series information',
+            text: 'PROB 1: Prerogative Court of Canterbury: Wills of Selected Famous Persons. Original wills of well known people, kept apart from the main series of wills.'
+          },
+          {
+            title: 'Catalogue hierarchy',
+            body: '<ol class="tna-ol"><li>Department: PROB</li><li>Series: PROB 1</li><li>Piece: PROB 1/4 (this record)</li></ol>'
+          }
+        ]
+      }) }}
+    </div>
+  </div>
+</div>
+{% endblock %}
