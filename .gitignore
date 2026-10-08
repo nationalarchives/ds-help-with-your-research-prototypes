@@ -6,6 +6,9 @@ node_modules/
 .env
 migrate.log
 
+# Private notes - never commit
+CLAUDE.local.md
+
 # General ignores
 .DS_Store
 .idea
