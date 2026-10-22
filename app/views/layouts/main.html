@@ -5,7 +5,7 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 
 {% extends "nationalarchives/templates/prototype-kit/_base.njk" %}
 
-{%- from "nationalarchives/components/header/macro.njk" import tnaHeader -%}
+{%- from "nationalarchives/components/global-header/macro.njk" import tnaGlobalHeader -%}
 
 {% block pageTitle %}{% if pageTitle %}{{ pageTitle }} - {% endif %}{{ serviceName }} - The National Archives{% endblock pageTitle %}
 
@@ -15,9 +15,22 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 {% endblock stylesheets %}
 
 {% block header %}
-  {{ tnaHeader({
+  {{ tnaGlobalHeader({
     logo: {
-      href: '/'
-    }
+      href: '/',
+      title: 'The National Archives home page'
+    },
+    topNavigation: [
+      { text: 'Search', href: '#', icon: 'search' },
+      { text: 'Shop', href: '#', icon: 'shop' }
+    ],
+    navigation: [
+      { text: 'Visit', href: '#' },
+      { text: 'What’s on', href: '#' },
+      { text: 'Explore the collection', href: '#' },
+      { text: 'Help using the archive', href: '/week-1/help-with-using-the-archive' },
+      { text: 'Education', href: '#' },
+      { text: 'Professional guidance and services', href: '#' }
+    ]
   }) }}
 {% endblock header %}
