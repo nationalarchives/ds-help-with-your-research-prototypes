@@ -6,3 +6,116 @@
 // layout does not load. It is linked from app/views/layouts/main.html.
 //
 
+
+// Index grid with all tile images cropped to 3:2
+.app-index-grid--uniform-images .tna-index-grid__item-image {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+// Bold text, including headings (TNA headings reset <strong> to the heading's own weight)
+.app-\!-font-weight-bold {
+  font-weight: 700 !important;
+}
+
+// Smaller body text for a block of content (headings keep their own sizes)
+.app-text-small {
+  font-size: 0.875em;
+}
+
+// List with an icon (such as a tick or cross) in place of each bullet
+.app-icon-list > li {
+  position: relative;
+  padding-left: 1.75em;
+}
+
+.app-icon-list__icon {
+  position: absolute;
+  top: 0.35em;
+  left: 0;
+}
+
+// Do and don't lists, based on the NHS pattern:
+// https://service-manual.nhs.uk/design-system/components/do-and-dont-lists
+.app-do-dont-list {
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+  padding: 0 2rem 1rem;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+  border: 1px solid var(--keyline, #d9d9d9);
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 48em) {
+    padding: 0 1.5rem 0.75rem;
+  }
+}
+
+.app-do-dont-list--do {
+  .app-icon-list__icon {
+    color: rgb(0, 98, 59);
+  }
+}
+
+.app-do-dont-list--dont {
+  .app-icon-list__icon {
+    color: var(--form-error-border, #c20000);
+  }
+
+  .tna-\!--margin-top-xs,
+  .tna-\!--margin-vertical-xs {
+    margin-top: 0 !important;
+    margin-bottom: 1rem;
+  }
+}
+
+// Heading label that sits across the top edge of the panel
+.app-do-dont-list .app-do-dont-list__heading {
+  display: inline-block;
+  position: relative;
+  top: -1rem;
+  margin: 0 0 0.25rem calc(-2rem - 1px);
+  padding: 0.5rem 2rem;
+  color: #fff;
+  background-color: #212223;
+
+  @media (max-width: 48em) {
+    top: -0.5rem;
+    margin-left: calc(-1.5rem - 1px);
+    padding: 0.5rem 1.5rem;
+  }
+}
+
+// Box with a thin border around a block of content
+.app-box {
+  padding: 1.5rem;
+  border: 1px solid var(--keyline, #d9d9d9);
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Children side by side, stacking on small screens
+.app-split {
+  display: flex;
+  gap: 2rem;
+
+  > * {
+    flex: 1;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 48em) {
+    flex-direction: column;
+  }
+}
+
+// Full-width white section with a bottom border, to separate it from what follows
+.app-section-separated {
+  background-color: #fff;
+  border-bottom: 1px solid var(--keyline, #d9d9d9);
+}

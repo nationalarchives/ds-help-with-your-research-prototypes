@@ -1,0 +1,18 @@
+{#
+Same as main.html, but with a logo-only header (no primary or top navigation).
+#}
+
+{% extends "layouts/main.html" %}
+
+{%- from "nationalarchives/components/global-header/macro.njk" import tnaGlobalHeader -%}
+
+{% block header %}
+  {{ tnaGlobalHeader({
+    logo: {
+      href: '/',
+      title: 'The National Archives home page'
+    },
+    topNavigation: [],
+    navigation: []
+  }) }}
+{% endblock header %}

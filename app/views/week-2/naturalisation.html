@@ -1,0 +1,302 @@
+{% extends "layouts/main.html" %}
+
+{%- from "nationalarchives/components/sidebar/macro.njk" import tnaSidebar -%}
+{%- from "nationalarchives/components/button/macro.njk" import tnaButton -%}
+{%- from "nationalarchives/components/warning/macro.njk" import tnaWarning -%}
+
+{% set pageTitle = "British citizenship, naturalisation and registration" %}
+
+{% block content %}
+<div class="tna-container tna-!--margin-vertical-s">
+  <div class="tna-column tna-column--full">
+    <nav class="tna-breadcrumbs" data-module="tna-breadcrumbs" aria-label="Breadcrumbs">
+      <ol class="tna-breadcrumbs__list" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="tna-breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="#" class="tna-breadcrumbs__link" itemprop="item">
+            <span itemprop="name">Home</span>
+          </a>
+          <meta itemprop="position" content="1">
+        </li>
+        <li class="tna-breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/week-1/help-with-using-the-archive" class="tna-breadcrumbs__link" itemprop="item">
+            <span itemprop="name">Help using the archive</span>
+          </a>
+          <meta itemprop="position" content="2">
+        </li>
+        <li class="tna-breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="#" class="tna-breadcrumbs__link" itemprop="item">
+            <span itemprop="name">Research guides</span>
+          </a>
+          <meta itemprop="position" content="3">
+        </li>
+        <li class="tna-breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <span itemprop="name" aria-current="page">British citizenship, naturalisation and registration</span>
+          <meta itemprop="position" content="4">
+        </li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<header class="tna-section tna-background-accent-light">
+  <div class="tna-container">
+    <div class="tna-column tna-column--width-2-3 tna-column--width-5-6-medium tna-column--full-small tna-column--full-tiny">
+      <hgroup class="tna-hgroup-xl">
+        <p class="tna-hgroup__supertitle">How to look for records of...</p>
+        <h1 class="tna-hgroup__title">British citizenship, naturalisation and registration</h1>
+      </hgroup>
+      <p class="tna-large-paragraph">Explore how to find records of how, when or if a person obtained British citizenship up to October 1986 through naturalisation or registration. Other forms of gaining, limiting or rejecting citizenship are also explored.</p>
+      <p>
+        <span class="tna-chip tna-chip--plain">
+          <i class="fa-solid fa-clock" aria-hidden="true"></i>
+          Average reading time: 20 minutes
+        </span>
+      </p>
+    </div>
+  </div>
+</header>
+
+<div class="tna-section app-section-separated">
+
+  <div class="tna-container">
+    <div class="tna-column tna-column--full">
+
+      <h2 class="tna-heading-l">Before you start</h2>
+
+      {{ tnaWarning({
+        headingLevel: 3,
+        classes: "app-text-small tna-!--margin-bottom-m",
+        body: "<strong>We can’t give legal advice.</strong> For questions about a living person’s rights or status in the UK, contact <a href=\"https://www.gov.uk/government/organisations/uk-visas-and-immigration\">UK Visas and Immigration</a> or a solicitor."
+      }) }}
+    </div>
+  </div>
+
+  <div class="tna-container">
+    <div class="tna-column tna-column--full">
+      <div class="app-split">
+        <div class="app-do-dont-list app-do-dont-list--do app-text-small">
+          <h3 class="tna-heading-m app-do-dont-list__heading">Records we hold</h3>
+          <ul class="tna-ul tna-ul--plain app-icon-list">
+            <li><i class="fa-solid fa-check app-icon-list__icon" aria-hidden="true"></i>Proof of British citizenship, including naturalisation, up to 1986</li>
+            <li><i class="fa-solid fa-check app-icon-list__icon" aria-hidden="true"></i>Registrations of British nationality, 1948 to 1986</li>
+            <li><i class="fa-solid fa-check app-icon-list__icon" aria-hidden="true"></i>Renunciations of British citizenship, 1800 to 1986</li>
+            <li><i class="fa-solid fa-check app-icon-list__icon" aria-hidden="true"></i>Denization (limited naturalisation), 1200 to 1873</li>
+          </ul>
+        </div>
+        <div class="app-do-dont-list app-do-dont-list--dont app-text-small">
+          <h3 class="tna-heading-m app-do-dont-list__heading">Records we don’t hold</h3>
+          <ul class="tna-ul tna-ul--plain app-icon-list">
+            <li><i class="fa-solid fa-xmark app-icon-list__icon" aria-hidden="true"></i>Naturalisation or citizenship after October 1986
+              <p class="tna-!--margin-top-xs tna-!--margin-bottom-xs"><a href="https://visas-immigration.service.gov.uk/product/nationality-services">Contact UK Visas and Immigration</a></p>
+            </li>
+            <li><i class="fa-solid fa-xmark app-icon-list__icon" aria-hidden="true"></i>Proof of indefinite leave to remain, from any time
+              <p class="tna-!--margin-top-xs tna-!--margin-bottom-xs"><a href="https://www.gov.uk/guidance/indefinite-leave-to-remain-in-the-uk-your-rights-and-status#if-you-do-not-have-a-document-to-prove-your-ilr-or-ile">Contact UK Visas and Immigration</a></p>
+            </li>
+            <li><i class="fa-solid fa-xmark app-icon-list__icon" aria-hidden="true"></i>Nationality registrations made overseas since 1949
+              <p class="tna-!--margin-top-xs "><a href="https://www.gov.uk/world/embassies">Contact the British High Commission</a></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="tna-section">
+  <div class="tna-container">
+    <div class="tna-column tna-column--width-1-4 tna-column--full-small tna-column--full-tiny">
+      {{ tnaSidebar({
+        title: "On this page",
+        headingLevel: 2,
+        type: "contents",
+        sticky: true,
+        items: [
+          { text: "When you need to contact us", href: "#when-you-need-to-contact-us" },
+          { text: "Searching for a record", href: "#searching-for-a-record" },
+          {
+            text: "A closer look at the records we hold",
+            href: "#a-closer-look-at-the-records-we-hold",
+            children: [
+              { text: "Naturalisation", href: "#naturalisation" },
+              { text: "Registration of British nationality (1948–1986)", href: "#registration-of-british-nationality-1948-1986" },
+              { text: "Renunciations of British citizenship", href: "#renunciations-of-british-citizenship" },
+              { text: "Evidence of Denization (around 1200–1873)", href: "#evidence-of-denization-around-1200-1873" }
+            ]
+          },
+          { text: "More resources", href: "#more-resources" }
+        ]
+      }) }}
+    </div>
+    <div class="tna-column tna-column--width-3-4 tna-column--full-small tna-column--full-tiny">
+      <h2 class="tna-heading-l" id="when-you-need-to-contact-us">When you need to contact us</h2>
+      <p>There are a few cases where our staff will need to search for records for you. These include:</p>
+      <ul class="tna-ul">
+        <li><a href="https://www.nationalarchives.gov.uk/contact-us/request-a-search-for-a-certificate-of-british-citizenship-1949-1986/">Request a certificate</a> of British citizenship or renunciation from before October 1986 for someone who is less than 100 years old</li>
+        <li><a href="https://www.nationalarchives.gov.uk/letter-of-no-evidence/">Request a written letter</a> from The National Archives to confirm that we can find no evidence that you or someone else acquired British citizenship through naturalisation before October 1986</li>
+      </ul>
+
+      <h2 class="tna-heading-l" id="searching-for-a-record">Searching for a record</h2>
+      <p>You must include the person’s last name in every search for a citizenship-related record.</p>
+      <p>All searches for citizenship records require you to include the last name of the person you’re searching for. Last names may be spelled differently or incorrectly within records, or the original name may have been anglicised.</p>
+      <p>It can also be useful to provide:</p>
+      <ul class="tna-ul">
+        <li>Full name</li>
+        <li>Date the certificate or record was issued</li>
+        <li>Certificate number for naturalisation certificates and registration of British nationality records</li>
+      </ul>
+      <p>Depending on what type of record you are looking for, you will need to add different terms to your catalogue search.</p>
+      <ul class="tna-ul">
+        <li>If you are looking for proof of naturalisation, include the term ‘naturalisation’</li>
+        <li>If you are looking for proof of registration of British nationality, include the term ‘registration’</li>
+        <li>If you are looking for a record of renunciation of British citizenship, include the term ‘renunciation’</li>
+        <li>If you are looking for Evidence of Denization, include the term ‘denization’</li>
+      </ul>
+      <p>In our catalogue, you can also search within a date range. This can reduce the results shown to you that do not relate to the record you are looking for.</p>
+       
+      {{ tnaButton({
+        text: "Search our catalogue",
+        classes: 'tna-!--margin-top-m',
+        href: "https://discovery.nationalarchives.gov.uk/"
+      }) }}
+
+      <h2 class="tna-heading-l" id="a-closer-look-at-the-records-we-hold">A closer look at the records we hold</h2>
+      <h3 class="tna-heading-m" id="naturalisation">Naturalisation</h3>
+      <p>Naturalisation is the legal process by which a person changes their nationality.</p>
+
+      <h4 class="tna-heading-s">Naturalisation certificates</h4>
+      <p>Naturalisation certificates are issued to all people who are granted British citizenship through naturalisation.</p>
+      <p>Usually naturalisation certificates contain:</p>
+      <ul class="tna-ul">
+        <li>full name</li>
+        <li>residence/address of applicant</li>
+        <li>birthplace</li>
+        <li>age/date of birth</li>
+        <li>parents’ names</li>
+        <li>name of spouse (if married)</li>
+        <li>occupation</li>
+        <li>children with their names and ages (if still of dependent age)</li>
+      </ul>
+      <h4 class="tna-heading-s">To search for naturalisation certificates from 1870-1986</h4>
+      <p>To access certificates from 1870-1948, you can search by name in record series <a href="https://www.ancestry.co.uk/search/db.aspx?dbid=9156">HO 334 on Ancestry.co.uk</a> and download (charges apply) naturalisation certificates. However, certified copies are available only from The National Archives. If you need a certified copy of a certificate from this period you can request one from our online catalogue.</p>
+      <p>For certificates after 1948, you can search by certificate number (if known) or by name followed by ‘naturalisation’ in our catalogue. These appear in series <a href="https://discovery.nationalarchives.gov.uk/results/r?_q=&amp;discoveryCustomSearch=true&amp;_ser=HO+334&amp;_ser=HO+409&amp;_sd=1913&amp;_ed=1948&amp;_hb=tna">HO 334 and HO 409</a>.</p>
+      <div class="tna-aside tna-aside--tight tna-background-tint">
+        <p>If you are looking for a naturalisation certificate from 1981-1986 for someone born less than 100 years ago, apply for a duplicate certificate through our <a href="https://www.nationalarchives.gov.uk/contact-us/request-a-search-for-a-certificate-of-british-citizenship-1949-1986/">Certificates of British citizenship</a> page.</p>
+      </div>
+      <h4 class="tna-heading-s">Certificates issued overseas</h4>
+      <p>Copies of naturalisation certificates granted by the Government of a British Possessions overseas (meaning British Colonies, Dominions, or Dependencies) can be found in HO 334 for 1915 to 1980 and can be searched by name on <a href="https://discovery.nationalarchives.gov.uk/results/r?_aq=%2A&amp;_cr=ho334&amp;_dss=range&amp;_ro=any&amp;_st=adv">Discovery</a>.</p>
+      <p>A small number of background Home Office papers survive for Overseas Applications for the period 1914 to 1935 in HO 144 and again can be searched by name on <a href="https://discovery.nationalarchives.gov.uk/results/r?_aq=%2A&amp;_cr=ho144&amp;_dss=range&amp;_sd=1914&amp;_ed=1935&amp;_ro=any&amp;_st=adv">Discovery</a>.</p>
+      <h4 class="tna-heading-s">Indexes to naturalisation certificates</h4>
+      <p>The Home Office indexes to naturalisation certificates cover 1908-1980. From June 1969 the Home Office did not keep a set of duplicate certificates issued in the UK for foreign nationals so the index is the only source of detail until 1980. The indexes contain:</p>
+      <ul class="tna-ul">
+        <li>name</li>
+        <li>place of residence</li>
+        <li>naturalisation number</li>
+        <li>date of issue</li>
+      </ul>
+      <p>In our catalogue, search by certificate number (if known) or by name followed by ‘naturalisation’. These appear in <a href="https://discovery.nationalarchives.gov.uk/details/r/C16036">series HO 409</a>.</p>
+      <h4 class="tna-heading-s">Naturalisation case papers</h4>
+      <p>These are the forms people filled out when applying for naturalisation after arriving in Britain. These records are of foreign nationals, most of them European, arriving in the UK between 1934 and 1948. Please note, if the application was not successful, the record is unlikely to have been kept.</p>
+      <p>These papers provide more detailed information on the applicant than the naturalisation certificate itself and may contain all or some of the following information:</p>
+      <ul class="tna-ul">
+        <li>nationality</li>
+        <li>profession</li>
+        <li>names and ages of spouse and children</li>
+        <li>birth date</li>
+        <li>birth place</li>
+        <li>address of the applicant</li>
+        <li>character reference(s)</li>
+        <li>police or Mayor’s report (after around 1878)</li>
+      </ul>
+      <h4 class="tna-heading-s">To search for naturalisation case papers of foreign nationals who arrived in the UK 1801-1871</h4>
+      <p>In our catalogue, search for a case paper using the last name of the person it was issued to. These appear in <a href="https://discovery.nationalarchives.gov.uk/results/r?_ser=HO%201&amp;id=C8865">series HO 1</a>. You can download and view these records online (charges apply).</p>
+      <h4 class="tna-heading-s">To search for naturalisation case papers of foreign nationals who arrived in the UK 1872-1934</h4>
+      <p>In our catalogue, search for a case paper using the last name of the person it was issued to. These appear in <a href="https://discovery.nationalarchives.gov.uk/results/r?_q=&amp;discoveryCustomSearch=true&amp;_ser=HO+45&amp;_ser=HO+144&amp;_ser=HO+382&amp;_hb=tna">series HO 45, HO 144, HO 382</a>.</p>
+      <h4 class="tna-heading-s">To search for naturalisation case papers of foreign nationals who arrived in the UK 1934-1948</h4>
+      <p>In our catalogue, search for a case paper using the last name of the person it was issued to. These appear in <a href="https://discovery.nationalarchives.gov.uk/details/r/C15109">series HO 405</a>.</p>
+      <h4 class="tna-heading-s">Private Acts of Parliament</h4>
+      <p>Most acts, usually recorded on parchment rolls, cover multiple individuals and list only names and professions. Acts for a single person can include more detail, such as parents’ names and place of birth. Supporting records may also survive, including petitions, certificates and papers showing the bill’s progress.</p>
+      <h5 class="tna-heading-xs app-!-font-weight-bold">Private Acts of Parliament after 1544-1843</h5>
+      <p>Before 1844, people could only become naturalised by a private Act of Parliament. Applicants were required to take the oaths of supremacy and allegiance, and from 1609 also to provide a certificate confirming they had received Holy Communion according to Anglican rites.</p>
+      <p class="app-!-font-weight-bold">Records of these oaths can be found:</p>
+      <ul class="tna-ul">
+        <li>Within the Oath Rolls records in series <a href="https://discovery.nationalarchives.gov.uk/SearchUI/Details?uri=C10028">KB 24</a></li>
+        <li>Within record series <a href="https://discovery.nationalarchives.gov.uk/SearchUI/Details?uri=C3879753">E 169/86</a> for oaths taken by protestant refugees from 1709-1711</li>
+        <li>Quarter Sessions court records, which are held at local archives</li>
+      </ul>
+      <p>Around 378 naturalisation Acts were passed between 1801 and 1844. Naturalisation Acts are private acts that can be found in our catalogue within the <a href="https://discovery.nationalarchives.gov.uk/browse/r/h/ce8e2c99-5dec-4c5a-aed2-6b204c009703">YHL/PO/PB/1</a> series. For more information see our research guide on <a href="https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/original-acts-of-parliament-and-royal-assent/">Original Acts of Parliament and Royal Assent</a>.</p>
+      <p>To find a naturalisation act, search the catalogue for the name of the individual. Note that ‘naturalisation’ is sometimes spelled as ‘naturalization’. As well as the Act, you may find related material such as bills, petitions and certificates in the <a href="https://discovery.nationalarchives.gov.uk/browse/r/h/d0d1c8f3-4c17-4f16-8d19-b118cc33301f">House of Lords Main Papers</a> (YHL/PO/JO/10). Be aware that Acts may have naturalised a number of people, while any surviving supporting documents may only be described in relation to the first person mentioned on the Act.</p>
+      <p>There may also be information in the Journals and Committee Books of the House of Lords showing the progress of the bill. The printed Journals are catalogued under the reference <a href="https://discovery.nationalarchives.gov.uk/browse/r/h/a888022d-468c-4034-bf09-b1dfc060c9f4">YHL/PO/JO/2</a> and the Committee Books under <a href="https://discovery.nationalarchives.gov.uk/browse/r/h/80c2f29b-2cf2-4d84-9e81-33e8091df81b">YHL/PO/CO/1</a>. Search or browse the catalogue to find the Journal and Committee Book for the year of the naturalisation.</p>
+      <p>Some additional records of naturalisations from this period can be found in series <a href="https://discovery.nationalarchives.gov.uk/SearchUI/Details?uri=C3625">C 65</a>.</p>
+      <h5 class="tna-heading-xs app-!-font-weight-bold">Private Acts of Parliament after 1844</h5>
+      <p>Only around 24 naturalisation Acts were passed from 1845. Naturalisation Acts are private acts catalogued under the catalogue reference <a href="https://discovery.nationalarchives.gov.uk/browse/r/h/ce8e2c99-5dec-4c5a-aed2-6b204c009703">YHL/PO/PB/1</a>. They were not usually printed so the only text is likely to be the original manuscript on parchment. For more information see our research guide on <a href="https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/original-acts-of-parliament-and-royal-assent/">Original Acts of Parliament and Royal Assent</a>.</p>
+      <p>To find a naturalisation act, search the catalogue for the name of the person. Note that ‘naturalisation’ is sometimes spelled as ‘naturalization’.</p>
+      <p>As well as the Act, you may find related material such as bills, petitions and certificates in the <a href="https://discovery.nationalarchives.gov.uk/browse/r/h/d0d1c8f3-4c17-4f16-8d19-b118cc33301f">House of Lords Main Papers</a> (YHL/PO/JO/10). Be aware that Acts may have naturalised a number of people, while any surviving supporting documents may only be described in relation to the first person mentioned on the Act.</p>
+      <p>There may also be information in the Journals and Committee Books of the House of Lords showing the progress of the bill. The printed Journals are catalogued under the reference <a href="https://discovery.nationalarchives.gov.uk/browse/r/h/a888022d-468c-4034-bf09-b1dfc060c9f4">YHL/PO/JO/2</a> and the Committee Books under <a href="https://discovery.nationalarchives.gov.uk/browse/r/h/80c2f29b-2cf2-4d84-9e81-33e8091df81b">YHL/PO/CO/1</a>. Search or browse the catalogue to find the Journal and Committee Book for the year of the naturalisation.</p>
+      <p>Some additional records of naturalisations from this period can be found in series <a href="https://discovery.nationalarchives.gov.uk/SearchUI/Details?uri=C3625">C 65</a>.</p>
+      <h4 class="tna-heading-s">Close rolls</h4>
+      <p>From 1844-1873, naturalisations were recorded, or ‘enrolled’, on documents known as close rolls. Close rolls can be found in <a href="https://discovery.nationalarchives.gov.uk/details/r/C3614">record series C 54</a>.</p>
+      <p>To find out which part of a C 54 record is relevant to your search, you can review its printed index <a href="https://discovery.nationalarchives.gov.uk/SearchUI/Details?uri=C3807">C 275</a>. The index is arranged by year so you will need at least a rough idea of when the naturalisation took place. This information can be found in correspondence and case papers from the <a href="https://discovery.nationalarchives.gov.uk/SearchUI/Details?uri=C8865">HO 1</a> series.</p>
+      <p>To use the index and view the rolls themselves you will need to <a href="https://www.nationalarchives.gov.uk/visit/">visit us</a> in Kew, London.</p>
+      <h4 class="tna-heading-s">Naturalisation of foreign protestants living in America 1740-1772</h4>
+      <p>Between 1740 and 1772, foreign protestants living in America could become naturalised British citizens after seven years’ residence. Over 7,000 foreign protestants took advantage of this.</p>
+      <p>Every year lists of those naturalised were sent to the Commission for Trade and Plantations in London, where they were then copied into entry books.</p>
+      <ul class="tna-ul">
+        <li>The lists are in series <a href="https://discovery.nationalarchives.gov.uk/SearchUI/Details?uri=C4196">CO 5</a></li>
+        <li>The entry books are in <a href="https://discovery.nationalarchives.gov.uk/SearchUI/Details?uri=C2975915">CO 324/5</a></li>
+      </ul>
+      <p>A list of the names in these records is in the published <a href="https://archive.org/details/naturalizationso24grea">Naturalizations of Foreign Protestants in the American and West Indian Colonies</a>, also <a href="https://tna.koha-ptfs.co.uk/cgi-bin/koha/opac-detail.pl?biblionumber=39625&amp;query_desc=kw%2Cwrdl%3A%20huguenot%20society%20naturalization">available in our library</a>.</p>
+      <h3 class="tna-heading-m" id="registration-of-british-nationality-1948-1986">Registration of British nationality (1948–1986)</h3>
+      <p>The British Nationality Act 1948 created the new status of citizen of the United Kingdom and the colonies. Under this act, people from former colonies and British Commonwealth countries could register as British citizens. People born in Ireland before 1949 were also considered British subjects and after the 1948 Act could also register British nationality. However, anyone born in the Republic of Ireland after 1948, seeking British citizenship, would need to apply to naturalise.</p>
+      <p>Registrations of nationality issued before 1970 tend to be in the form of an application with information similar to naturalisation certificates.</p>
+      <p>From 1970 they tend only to include the full name of the applicant, their date and place of birth.</p>
+      <h4 class="tna-heading-s">To search for a registration of British nationality</h4>
+      <p>In our catalogue, search by certificate number (if known) or by name followed by ‘registration’. These appear in <a href="https://discovery.nationalarchives.gov.uk/results/r?_q=&amp;discoveryCustomSearch=true&amp;_ser=HO+334&amp;_ser=HO+409&amp;_ser=HO+45&amp;_ser=HO+144&amp;_ser=HO+382&amp;_hb=tna">series HO 334, HO 409, HO 45, HO 144 and HO 382</a>.</p>
+      <div class="tna-aside tna-aside--tight tna-background-tint">
+        <p>If you are looking for a registration of British nationality for someone born less than 100 years ago, apply for a duplicate certificate through our <a href="https://www.nationalarchives.gov.uk/contact-us/request-a-search-for-a-certificate-of-british-citizenship-1949-1986/">Certificates of British citizenship</a> page.</p>
+      </div>
+      <h3 class="tna-heading-m" id="renunciations-of-british-citizenship">Renunciations of British citizenship</h3>
+      <p>Within the records of citizenship sent to The National Archives from the Home Office are records of people who have renounced their British citizenship.</p>
+      <h4 class="tna-heading-s">To search for a renunciation of British nationality</h4>
+      <p>In our catalogue, search by name followed by ‘renunciation’. These appear in <a href="https://discovery.nationalarchives.gov.uk/results/r?_q=&amp;discoveryCustomSearch=true&amp;_ser=HO+334&amp;_ser=HO+409&amp;_ser=HO+45&amp;_ser=HO+144&amp;_ser=HO+382&amp;_hb=tna">series HO 334, HO 409, HO 45, HO 144 and HO 382</a>.</p>
+      <div class="tna-aside tna-aside--tight tna-background-tint">
+        <p>If you are looking for a renunciation of British citizenship for someone born less than 100 years ago, apply for a duplicate certificate through our <a href="https://www.nationalarchives.gov.uk/contact-us/request-a-search-for-a-certificate-of-british-citizenship-1949-1986/">Certificates of British citizenship</a> page.</p>
+      </div>
+      <h3 class="tna-heading-m" id="evidence-of-denization-around-1200-1873">Evidence of Denization (around 1200–1873)</h3>
+      <p>Denization was a legal process granting limited naturalisation to aliens. It granted a foreign national almost equivalent status of native-born Britons and provided them the protection of the law. However, those granted denization were still subject to alien rates of tax, unable to vote, hold civil or military office or inherit land.</p>
+      <h4 class="tna-heading-s">To search for denization records</h4>
+      <p>Denization was granted by letters patent and this required a payment, so, as with naturalisation in this period, denization remained the preserve of the wealthy. These can be found in different record series in our catalogue by time period.</p>
+      <ul class="tna-ul">
+        <li><a href="https://discovery.nationalarchives.gov.uk/SearchUI/Details?uri=C3626">C 66</a> and <a href="https://discovery.nationalarchives.gov.uk/SearchUI/Details?uri=C3627">C 67</a> (1275-1749)</li>
+        <li><a href="https://discovery.nationalarchives.gov.uk/SearchUI/Details?uri=C3656">C 97</a> (1752-1830)</li>
+        <li><a href="https://discovery.nationalarchives.gov.uk/SearchUI/Details?uri=C8865">HO 1</a> (1789-1872)</li>
+        <li><a href="https://discovery.nationalarchives.gov.uk/SearchUI/Details?uri=C8868">HO 4</a> (1804-1843)</li>
+        <li><a href="https://discovery.nationalarchives.gov.uk/SearchUI/Details?uri=C8908">HO 44</a> (1773-1861)</li>
+      </ul>
+      <h2 class="tna-heading-l" id="more-resources">More resources</h2>
+      <ul class="tna-ul">
+        <li>Consult the <a href="https://www.huguenotsociety.org.uk/">Huguenot Society</a> website for indexes of naturalisations and denizations up to 1900. Some of these indexes are available online on the Internet Archive:
+          <ul class="tna-ul">
+            <li><a href="https://archive.org/details/lettersofdenizat8150page">Letters of Denization and Acts of Naturalization 1509-1603</a></li>
+            <li><a href="https://archive.org/details/lettersofdenizat1816hugu">Letters of Denization and Acts of Naturalization 1603-1700</a></li>
+            <li><a href="https://archive.org/details/lettersofdenizat2717hugu">Letters of Denization and Acts of Naturalization 1701-1800</a></li>
+          </ul>
+        </li>
+        <li>Some of the indexes are also available in our library:
+          <ul class="tna-ul">
+            <li><a href="https://tna.koha-ptfs.co.uk/cgi-bin/koha/opac-detail.pl?biblionumber=39616&amp;query_desc=kw%2Cwrdl%3A%20huguenot%20society%20naturalization">Letters of Denization and Acts of Naturalization for Aliens in England and Ireland 1603-1700</a></li>
+            <li><a href="https://tna.koha-ptfs.co.uk/cgi-bin/koha/opac-detail.pl?biblionumber=5205&amp;query_desc=kw%2Cwrdl%3A%20huguenot%20society%20naturalization">Letters of Denization and Acts of Naturalization for Aliens in England and Ireland 1701-1800</a></li>
+          </ul>
+          Versions of these indexes are held with the printed version of our catalogue at our building in Kew.
+        </li>
+        <li>Search <a href="https://parlipapers.proquest.com/parlipapers">ProQuest UK Parliamentary Papers</a> for indexes of all naturalisations from 1844 to 1961. This is a subscription website you can access on The National Archives computers by visiting us at Kew.</li>
+        <li>Visit the Westminster Abbey Muniments and Library to view the Westminster denization roll.</li>
+        <li>Search the London Gazette online by name for published announcements of naturalisations from 1844–1980.</li>
+        <li>Roger Kershaw, Migration Records: A Guide for Family Historians (The National Archives, 2009)</li>
+        <li>Roger Kershaw and Mark Pearsall, Immigrants and Aliens: A Guide to Sources on UK Immigration and Citizenship (The National Archives, 2004)</li>
+        <li><a href="https://www.legislation.gov.uk/ukpga/1971/77/contents/enacted">The Immigration Act 1971</a></li>
+        <li><a href="https://www.legislation.gov.uk/ukpga/1981/61/enacted">The British Nationality Act 1981</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}
