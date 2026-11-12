@@ -18,6 +18,10 @@
   font-weight: 700 !important;
 }
 
+.app-\!-margin-top-0 {
+  margin-top: 0 !important;
+}
+
 // Smaller body text for a block of content (headings keep their own sizes)
 .app-text-small {
   font-size: 0.875em;
@@ -118,4 +122,35 @@
 .app-section-separated {
   background-color: #fff;
   border-bottom: 1px solid var(--keyline, #d9d9d9);
+}
+
+// Full-width bottom border for a secondary navigation, which otherwise stops at the container edge
+.app-secondary-navigation-wrapper {
+  border-bottom: 1px solid var(--keyline, #d9d9d9);
+}
+
+// Side panel separated from the page by a top border only, such as related guides
+.app-side-panel {
+  padding-top: 1rem;
+  border-top: 1px solid var(--keyline, #d9d9d9);
+}
+
+// Full-width notice banner with an icon, such as a content warning
+.app-notice-banner {
+  padding: 0.75rem 0;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid var(--keyline, #d9d9d9);
+}
+
+.app-notice-banner__text {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-size: 0.875em;
+}
+
+.app-notice-banner__icon {
+  flex-shrink: 0;
+  margin-right: 0.5rem;
+  font-size: 25px;
 }
