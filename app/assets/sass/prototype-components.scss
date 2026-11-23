@@ -6,16 +6,52 @@
 // layout does not load. It is linked from app/views/layouts/main.html.
 //
 
+// GOV.UK Frontend styles for the GOV.UK macros used on TNA pages (govukPagination),
+// with the link and visually hidden styles they depend on
+@use "node_modules/govuk-frontend/dist/govuk/core/links";
+@use "node_modules/govuk-frontend/dist/govuk/utilities/visually-hidden";
+@use "node_modules/govuk-frontend/dist/govuk/components/pagination";
 
-// Index grid with all tile images cropped to 3:2
-.app-index-grid--uniform-images .tna-index-grid__item-image {
-  aspect-ratio: 3 / 2;
-  object-fit: cover;
+// GOV.UK pagination with TNA type and colours, using TNA's own focus style
+.govuk-pagination {
+  --govuk-text-colour: var(--font-base);
+  --govuk-secondary-text-colour: var(--font-light);
+  --govuk-inverse-text-colour: var(--background);
+  --govuk-border-colour: var(--keyline);
+  --govuk-link-colour: var(--link);
+  --govuk-link-visited-colour: var(--link-visited);
+  --govuk-link-hover-colour: var(--link);
+  --govuk-link-active-colour: var(--link);
+  --govuk-focus-colour: transparent;
+  --govuk-focus-text-colour: var(--link);
+
+  .govuk-link,
+  .govuk-pagination__item,
+  .govuk-pagination__next,
+  .govuk-pagination__prev {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  .govuk-pagination__item:hover,
+  .govuk-pagination__next:hover,
+  .govuk-pagination__prev:hover {
+    background-color: var(--background-tint);
+  }
+
+  .govuk-pagination__item--current:hover {
+    background-color: var(--link);
+  }
 }
 
-// Bold text, including headings (TNA headings reset <strong> to the heading's own weight)
-.app-\!-font-weight-bold {
-  font-weight: 700 !important;
+// Realign the arrow with the TNA line height
+.govuk-pagination--block .govuk-pagination__icon {
+  margin-top: 0.5em;
+}
+
+.app-\!-margin-top-0 {
+  margin-top: 0 !important;
 }
 
 // Smaller body text for a block of content (headings keep their own sizes)
@@ -23,99 +59,33 @@
   font-size: 0.875em;
 }
 
-// List with an icon (such as a tick or cross) in place of each bullet
-.app-icon-list > li {
-  position: relative;
-  padding-left: 1.75em;
-}
-
-.app-icon-list__icon {
-  position: absolute;
-  top: 0.35em;
-  left: 0;
-}
-
-// Do and don't lists, based on the NHS pattern:
-// https://service-manual.nhs.uk/design-system/components/do-and-dont-lists
-.app-do-dont-list {
-  margin-top: 1.5rem;
-  margin-bottom: 3rem;
-  padding: 0 2rem 1rem;
-  box-sizing: border-box;
-  background-color: #f4f4f4;
-  border: 1px solid var(--keyline, #d9d9d9);
-
-  > :last-child {
-    margin-bottom: 0;
-  }
-
-  @media (max-width: 48em) {
-    padding: 0 1.5rem 0.75rem;
-  }
-}
-
-.app-do-dont-list--do {
-  .app-icon-list__icon {
-    color: rgb(0, 98, 59);
-  }
-}
-
-.app-do-dont-list--dont {
-  .app-icon-list__icon {
-    color: var(--form-error-border, #c20000);
-  }
-
-  .tna-\!--margin-top-xs,
-  .tna-\!--margin-vertical-xs {
-    margin-top: 0 !important;
-    margin-bottom: 1rem;
-  }
-}
-
-// Heading label that sits across the top edge of the panel
-.app-do-dont-list .app-do-dont-list__heading {
-  display: inline-block;
-  position: relative;
-  top: -1rem;
-  margin: 0 0 0.25rem calc(-2rem - 1px);
-  padding: 0.5rem 2rem;
-  color: #fff;
-  background-color: #212223;
-
-  @media (max-width: 48em) {
-    top: -0.5rem;
-    margin-left: calc(-1.5rem - 1px);
-    padding: 0.5rem 1.5rem;
-  }
-}
-
-// Box with a thin border around a block of content
-.app-box {
-  padding: 1.5rem;
-  border: 1px solid var(--keyline, #d9d9d9);
-
-  > :last-child {
-    margin-bottom: 0;
-  }
-}
-
-// Children side by side, stacking on small screens
-.app-split {
-  display: flex;
-  gap: 2rem;
-
-  > * {
-    flex: 1;
-    margin-bottom: 0;
-  }
-
-  @media (max-width: 48em) {
-    flex-direction: column;
-  }
-}
-
-// Full-width white section with a bottom border, to separate it from what follows
-.app-section-separated {
-  background-color: #fff;
+// Full-width bottom border for a secondary navigation, which otherwise stops at the container edge
+.app-secondary-navigation-wrapper {
   border-bottom: 1px solid var(--keyline, #d9d9d9);
+}
+
+// Side panel separated from the page by a top border only, such as related guides
+.app-side-panel {
+  padding-top: 1rem;
+  border-top: 1px solid var(--keyline, #d9d9d9);
+}
+
+// Full-width notice banner with an icon, such as a content warning
+.app-notice-banner {
+  padding: 0.75rem 0;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid var(--keyline, #d9d9d9);
+}
+
+.app-notice-banner__text {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-size: 0.875em;
+}
+
+.app-notice-banner__icon {
+  flex-shrink: 0;
+  margin-right: 0.5rem;
+  font-size: 25px;
 }
